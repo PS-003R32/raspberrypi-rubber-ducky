@@ -8,7 +8,7 @@ I have used a Raspberry pi pico wh for this project.
 1. Download CircuitPython UF2 file for Raspberry Pi Pico W from [CircuitPython for rpi pico](https://circuitpython.org/board/raspberry_pi_pico_w/). Download the latest release.
 2. Connect Pico WH to your computer via USB while holding the `BOOTSEL` button. It appears as a drive named RPI-RP2.
 3. Copy the entire "lib" folder to the root of the `CIRCUITPY` drive.
-4. Copy code.py and duckyinpython.py to the root of CIRCUITPY.
+4. Copy code.py, duckyinpython.py, secrets.py webapp.py and wsgiserver.py to the root of CIRCUITPY. (edit the secrets.py accordingly for setting up the access point.)
 5. Create a payload file: Open a text editor, write DuckyScript code or you can check out the payloads in this repository.
 6. Save the file as payload.dd in the root of CIRCUITPY.
 7. Remove the jumper. Plug Pico into target computer; it emulates a keyboard and injects the payload keystrokes.
