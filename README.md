@@ -1,20 +1,31 @@
-# RaspberryPi-wifi-cracker
-A complete guide to create wi-fi de-authentication and password cracking tool using a Raspberry Pi Zero 2W and a ssd1306 Oled module for visuals.
-***NOT AVAILABLE AT THE MOMENT...***
----
-## Prerequisites
-Hardware:
->Raspberry Pi Zero 2W<br>
->SSD1306 OLED display (128x64, I2C interface)<br>
->TP-Link Wi-Fi adapter (e.g., TL-WN722N, supports monitor mode)<br>
->MicroSD card (16GB or larger)<br>
->USB OTG adapter (for connecting the TP-Link adapter)<br>
->Power supply (5V, 2A)<br>
->Windows machine for SSH
+# Raspberry Pi Pico WH as HID for Keystroke Injection
+A step-by-step guide to turn your Raspberry Pi Pico WH into a HID device. Works as a rubber ducky.
+I have used a Raspberry pi pico wh for this project.
 
-Software:
->Kali Linux for Raspberry Pi Zero 2W<br>
->PuTTY for SSH on Windows<br>
->Python libraries for OLED control<br>
->Aircrack-ng suite<br>
->Wordlist for password cracking (e.g., rockyou.txt)
+---
+## Installation
+***NOTE: To edit safely (setup mode): Use a jumper wire to connect GP0 (pin 1) to GND (pin 3) on Pico WH before plugging into your computer.***
+1. Download CircuitPython UF2 file for Raspberry Pi Pico W from [CircuitPython for rpi pico](https://circuitpython.org/board/raspberry_pi_pico_w/). Download the latest release.
+2. Connect Pico WH to your computer via USB while holding the `BOOTSEL` button. It appears as a drive named RPI-RP2.
+3. Copy the entire "lib" folder to the root of the `CIRCUITPY` drive.
+4. Copy code.py and duckyinpython.py to the root of CIRCUITPY.
+5. Create a payload file: Open a text editor, write DuckyScript code or you can check out the payloads in this repository.
+6. Save the file as payload.dd in the root of CIRCUITPY.
+7. Remove the jumper. Plug Pico into target computer; it emulates a keyboard and injects the payload keystrokes.
+
+---
+## Example payload
+This code here will open the powershell using the Win+r key and type ipconfig command which displays the IP configuration on the target.
+```text
+REM Opens PowerShell and runs ipconfig
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 1500
+STRING ipconfig
+ENTER
+```
+Here you can change the `DELAY` time to 2 sec or other as some computers might take more time than 1 sec.
+*NOTE: This is just an example code, you can try to create your payloads and save it to the root of the rpi as an `.dd` file after completing the installation process as explained above.*
