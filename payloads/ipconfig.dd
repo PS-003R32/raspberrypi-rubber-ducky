@@ -1,0 +1,9 @@
+REM Opens PowerShell and runs ipconfig
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 1500
+STRING ipconfig
+ENTER
