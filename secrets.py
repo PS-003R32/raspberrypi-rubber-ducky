@@ -1,4 +1,1 @@
-secrets = {
-    'ssid' : "TestAP",
-    'password' : "passw1234"
-}
+secrets = {'ssid' : "rpiPICO",'password' : "pa$$"}
