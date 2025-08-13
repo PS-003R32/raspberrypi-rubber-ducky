@@ -27,5 +27,8 @@ DELAY 1500
 STRING ipconfig
 ENTER
 ```
-Here you can change the `DELAY` time to 2 sec or other as some computers might take more time than 1 sec.
-*NOTE: This is just an example code, you can try to create your payloads and save it to the root of the rpi as an `.dd` file after completing the installation process as explained above.*
+Here you can change the `DELAY` time to 2 sec or other as some computers might take more time than 1 sec.<br>
+
+---
+NOTE:
+This is just an example code, you can try to create your payloads and save it to the root of the rpi as an `.dd` file after completing the installation process as explained above.
