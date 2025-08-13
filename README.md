@@ -1,5 +1,5 @@
 # Raspberry Pi Pico WH as HID for Keystroke Injection
-A step-by-step guide to turn your Raspberry Pi Pico WH into a HID device. Works as a rubber ducky.
+A step-by-step guide to turn your Raspberry Pi Pico WH into a HID device. Works as a rubber ducky and you can remotely add payloads.
 I have used a Raspberry pi pico wh for this project.
 
 ---
@@ -12,6 +12,11 @@ I have used a Raspberry pi pico wh for this project.
 5. Create a payload file: Open a text editor, write DuckyScript code or you can check out the payloads in this repository.
 6. Save the file as payload.dd in the root of CIRCUITPY.
 7. Remove the jumper. Plug Pico into target computer; it emulates a keyboard and injects the payload keystrokes.
+
+---
+## Connecting to the pico via its AP
+edit the secrets.py file and change ssid of your pico and set the password. You then need to connect to the AP using the credentials.
+Open a web browser and go to 198.162.4.1 (this is the default ip of the pico), here you can add or edit your payloads remotely after you plus it in to the target computer.
 
 ---
 ## Example payload
