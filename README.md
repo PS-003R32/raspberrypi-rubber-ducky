@@ -17,6 +17,9 @@ I have used a Raspberry pi pico wh for this project.
 ## Connecting to the pico via its AP
 edit the secrets.py file and change ssid of your pico and set the password. You then need to connect to the AP using the credentials.
 Open a web browser and go to 198.162.4.1 (this is the default ip of the pico), here you can add or edit your payloads remotely after you plus it in to the target computer.
+<img width="636" height="315" alt="image" src="https://github.com/user-attachments/assets/db497e4f-d9ef-41f6-93d0-0f195e2dd6fc" /><br>
+<img width="675" height="316" alt="image" src="https://github.com/user-attachments/assets/74e0a137-c447-48ee-876b-30e73fe5f24c" /><br>
+
 
 ---
 ## Example payload
