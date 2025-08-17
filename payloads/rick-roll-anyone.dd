@@ -1,0 +1,53 @@
+REM Rick Roll that prevents closing and muting for 10 seconds
+DELAY 1000
+GUI r
+DELAY 500
+
+REM Launch Edge in --kiosk mode. This is a special fullscreen that's hard to exit.
+REM This command also works for Chrome.
+STRING msedge --kiosk "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+ENTER
+DELAY 5000
+
+REM This loop repeatedly turns the volume up to fight user attempts to mute it.
+REM Each VOLUME_UP + DELAY block is half a second. Repeat 20 times for 10 seconds.
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
+VOLUME_UP
+DELAY 500
