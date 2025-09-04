@@ -14,7 +14,10 @@ DELAY 1000
 LEFT
 ENTER
 DELAY 2000
-STRING 
+STRING Disable-PnpDevice -InstanceId "DeviceID" -Confirm:$false
+DELAY 1000
+DELAY 2000
+STRING Disable-PnpDevice -InstanceId "DeviceID" -Confirm:$false
 DELAY 1000
 ENTER
 DELAY 500
